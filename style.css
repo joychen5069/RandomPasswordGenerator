@@ -14,8 +14,10 @@ body,
 }
 
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Quantico', sans-serif;
   background-color: #f9fbfd;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
 }
 
 .wrapper {
@@ -35,12 +37,16 @@ header {
   background-color: rgb(0, 0, 0);
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: hsl(114, 100%, 50%) 0px 2px 8px 0px;
   color: hsl(114, 100%, 50%);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+}
+
+h2 {
+  text-align: center;
 }
 
 .card-header::after {
@@ -87,6 +93,7 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Quantico', sans-serif;
 }
 
 button[disabled] {
@@ -118,6 +125,7 @@ button[disabled] {
   resize: none;
   overflow: hidden;
   color: hsl(114, 100%, 50%) ;
+  font-family: 'Quantico', sans-serif;
 }
 
 @media (max-width: 690px) {
