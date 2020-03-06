@@ -7,8 +7,6 @@ function writePassword(length) {
  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password; //not entirely sure what this is doing right now...
-
   //variables for the password
 var validChars = []
 var lower = 'abcdefghijklmnopqrstuvwxyz'.split('')
@@ -82,6 +80,7 @@ password = password.concat(validChars[wholeNum]) //combine all items selected fr
 }
   
   console.log(password)
+  passwordText.value = password; //putting it in the html
 
 }
 // Add event listener to generate button
