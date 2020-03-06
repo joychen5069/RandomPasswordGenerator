@@ -56,9 +56,6 @@ var special =  ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'.split('')
       validChars = validChars.concat(special)
     }
 
-console.log(validChars)
-
-
   }
   //IF USER DECIDED TO PUT SOMETHING NOT BETWEEN 8 AND 128 AND/OR IS NOT AN INTEGER, KICK IT BACK
     else {
@@ -78,8 +75,7 @@ validChars[wholeNum] //select items from list using random number generated
 
 password = password.concat(validChars[wholeNum]) //combine all items selected from list into password list
 }
-  
-  console.log(password)
+
   passwordText.value = password; //putting it in the html
 
 }
