@@ -67,8 +67,23 @@ console.log(validChars)
       alert("That's not allowed. Try again")
    
     }
+//if at least one condition is selected, need an empty string to store password
+var password = ''
+    
+//to generate password, insert for loop to show how many times you need to loop 
+for (var i = 0; i < UserNumber; i++) {
+  // Generate a random decimal number between 0 and length of array to select associated list item in array
+  var num = Math.random();
+  var wholeNum = Math.floor(num * validChars.length) 
 
+validChars[wholeNum] //select items from list using random number generated
 
+password = password.concat(validChars[wholeNum]) //combine all items selected from list into password list
+}
+  
+  console.log(password)
+
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
