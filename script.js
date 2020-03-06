@@ -1,12 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//create variable array for numbers 8-126 for password length
-var array = [];
-for (var i = 8; i <= 128; i++) {
-array.push(i);
-}
-console.log(array)
+
 // Write password to the #password input
 function writePassword(length) {
   console.log("it works")
@@ -15,17 +10,45 @@ function writePassword(length) {
 
   passwordText.value = password;
 
-  var UserNumber = prompt("How many characters do you want your password to have? (must be between 8 and 128 characters)")
-    //if UserNumer is not an integer, repeat question
-  //else continue to characters
-  if (UserNumber.indexOf(array)) {
-    var lowerCase = confirm("Do you lower case letters?")
+  var Input = prompt("How many characters do you want your password to have? (must be between 8 and 128 characters)")
+  var UserNumber = parseInt(Input)
+    //if UserNumer is an integer between 8 and 128, run through prompts
+  //else continue kick back and repeat
+  if (UserNumber >= 8 && UserNumber <= 128 && Number.isInteger(UserNumber)) {
+    var lowerCase = confirm("Do you want lower case letters?")
     var UpperCase = confirm("Do you want upper case letters?")
     var Num = confirm("Do you want numbers?")
-    var Special = confirm("DO you want special characters?")
-    
+    var Special = confirm("Do you want special characters?")
+    //if user chooses all, then spit out password with all characters
+    if (lowerCase != 1 && UpperCase != 1 && Num != 1 && Special != 1) {
+      alert("You have to pick at least one condition");
+    }
+
+    // if user only chooses lower case
+    else if (lowerCase == 1 && UpperCase != 1 && Num != 1 && Special != 1){
+      //only lower case password
+      //choose the UserNumber number of lower case letters and shuffle to make password
+    }
+
+    // if user only chooses upper case
+    else if (lowerCase != 1 && UpperCase == 1 && Num != 1 && Special != 1){
+
+    }
+
+    // if user only chooses numbers
+    else if (lowerCase != 1 && UpperCase != 1 && Num == 1 && Special != 1){
+
+    }
+
+    //if user only chooses special characters
+    else if (lowerCase != 1 && UpperCase != 1 && Num != 1 && Special == 1){
+
+    }
+
+
   }
     else {
+      console.log(Number.isInteger(UserNumber))
       alert("That's not allowed. Try again")
    
     }
