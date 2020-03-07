@@ -12,9 +12,16 @@ body,
   margin: 0;
   padding: 0;
 }
+/*font family*/
+body, 
+.btn,
+#password {
+  font-family: 'Orbitron', sans-serif;
+}
+
 
 body {
-  font-family: 'Quantico', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   background-color: #f9fbfd;
   letter-spacing: 0.1em;
   font-weight: lighter;
@@ -93,7 +100,6 @@ h2 {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
-  font-family: 'Quantico', sans-serif;
 }
 
 button[disabled] {
@@ -125,7 +131,6 @@ button[disabled] {
   resize: none;
   overflow: hidden;
   color: hsl(114, 100%, 50%) ;
-  font-family: 'Quantico', sans-serif;
 }
 
 @media (max-width: 690px) {
