@@ -8,7 +8,7 @@ function writePassword(length) {
   var passwordText = document.querySelector("#password");
 
   //variables for the password
-var validChars = []
+var validChars = [] //store the user selected variables into the empty list
 var lower = 'abcdefghijklmnopqrstuvwxyz'.split('')
 var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 var numberlist = '1234567890'.split('')
@@ -16,11 +16,10 @@ var special =  ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'.split('')
 
 //start of the alert box/questions
   var Input = prompt("How many characters do you want your password to have? (must be between 8 and 128 characters)")
-  var UserNumber = parseInt(Input) //turns Input into an integer
+  var length = parseInt(Input) //turns Input into an integer
 
-    //if UserNumer is an integer between 8 and 128, run through prompts
-  //else continue kick back and repeat
-  if (UserNumber >= 8 && UserNumber <= 128 && Number.isInteger(UserNumber)) {
+    //if length is an interger between 8 and 128, continue. Otherwise kick back and repeat
+  if (length >= 8 && length <= 128 && Number.isInteger(length)) {
     var lowerCase = confirm("Do you want lower case letters?")
     var UpperCase = confirm("Do you want upper case letters?")
     var Num = confirm("Do you want numbers?")
@@ -66,7 +65,7 @@ var special =  ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'.split('')
 var password = ''
     
 //to generate password, insert for loop to show how many times you need to loop 
-for (var i = 0; i < UserNumber; i++) {
+for (var i = 0; i < length; i++) {
   // Generate a random decimal number between 0 and length of array to select associated list item in array
   var num = Math.random();
   var wholeNum = Math.floor(num * validChars.length) 
