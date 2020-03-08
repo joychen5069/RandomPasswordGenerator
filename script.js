@@ -21,20 +21,19 @@ var special =  ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'.split('')
     //if length is an interger between 8 and 128, continue. Otherwise kick back and repeat
   if (length >= 8 && length <= 128 && Number.isInteger(length)) {
     var lowerCase = confirm("Do you want lower case letters?")
-    var UpperCase = confirm("Do you want upper case letters?")
+    var UpperCase = confirm("Do you want UPPER CASE letters?")
     var Num = confirm("Do you want numbers?")
     var Special = confirm("Do you want special characters?")
     
     //if user chooses none, tell them to start over
     if (lowerCase != 1 && UpperCase != 1 && Num != 1 && Special != 1) {
-      alert("You have to pick at least one condition");
+      alert("Unacceptable. You must choose a set of characters.");
     }
 
     // if user chooses lower case
       if (lowerCase == 1){
      //add lower to empty validChars
       validChars = validChars.concat(lower)
-       
     }
 
     // if user chooses upper case
@@ -58,7 +57,7 @@ var special =  ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'.split('')
   }
   //IF USER DECIDED TO PUT SOMETHING NOT BETWEEN 8 AND 128 AND/OR IS NOT AN INTEGER, KICK IT BACK
     else {
-      alert("That's not allowed. Try again")
+      alert("Unacceptable. Try again")
    
     }
 //if at least one condition is selected, need an empty string to store password
