@@ -23,5 +23,7 @@ Otherwise, my password generator will give you a password that must
 
 I know it sounds like a lot but can you put a length on password security? Anyways, I hope you use this every time you need a new password. 
 
+<img src="/assets/images/passwordGenerator.jpg" alt="Random Password Screenshot" width="100%" height="auto">
+
 https://joychen5069.github.io/RandomPasswordGenerator/
 
